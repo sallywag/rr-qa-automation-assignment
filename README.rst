@@ -86,7 +86,9 @@ Possible Improvements
 
 9. Custom waits to remove generic timeouts (like I have in the open_new_account method of the OpenAccountPage class).
 
-10. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
+10. Transaction date range should be based off of the servers time zone.
+
+11. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
 
 CI/CD
 -----
@@ -94,6 +96,19 @@ CI/CD
 The tests in this project could be run every time an update is pushed to a merge request. To ensure basic functionality is not broken by any changes.
 These can also be run whenever code is merged into a development or a UAT environment. The tests should only be run after things like code building, linting,
 type checking, security & accessibility checking, and unit tests have passed.
+
+Issues
+------
+
+1. No validation on the registration form.
+
+2. There does not appear to be a good way to get a customers ID.
+
+3. I sometimes recieve a 503 error when trying to register.
+
+4. I do not seem to have permission to perform POST requests.
+
+5. You are not logged out after a database clean.
 
 Contact
 -------
