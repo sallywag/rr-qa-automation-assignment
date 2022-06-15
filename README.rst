@@ -94,3 +94,10 @@ CI/CD
 The tests in this project could be run every time an update is pushed to a merge request. To ensure basic functionality is not broken by any changes.
 These can also be run whenever code is merged into a development or a UAT environment. The tests should only be run after things like code building, linting,
 type checking, security & accessibility checking, and unit tests have passed.
+
+Contact
+-------
+
+Salvatore Rosa
+
+salvatore.rosa91@yahoo.com
