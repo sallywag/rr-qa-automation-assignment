@@ -24,9 +24,11 @@ How to Run
 From the rr-qa-automation-assignment folder,
 
 To run the tests with HTML reporting, run the file directly:
+
 ``python test_para_bank.py``
 
 To run the tests with console output, use the unittest runner:
+
 ``python -m unittest -v test_para_bank.py``
 
 Technologies Used
