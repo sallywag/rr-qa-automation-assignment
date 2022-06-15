@@ -88,7 +88,9 @@ Possible Improvements
 
 10. Transaction date range should be based off of the servers time zone.
 
-11. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
+11. Account number and customer ID are hardcoded as data in the ParaBankTestData class for convenience. These should be fetched dynamically in production code.
+
+12. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
 
 CI/CD
 -----
