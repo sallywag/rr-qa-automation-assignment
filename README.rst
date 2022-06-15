@@ -84,7 +84,9 @@ Possible Improvements
 
 8. Test results reporting to a program like TestRail could be useful.
 
-9. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
+9. Custom waits to remove generic timeouts (like I have in the open_new_account method of the OpenAccountPage class).
+
+10. General improvments could include support for multiple browsers, headless test running, improved logging, etc.
 
 CI/CD
 -----
