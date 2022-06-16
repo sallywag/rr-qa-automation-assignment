@@ -29,3 +29,6 @@ class ParaBank:
         self.find_transactions_page = FindTransactionsPage(
             self._driver, self._element_handler
         )
+
+    def quit(self) -> None:
+        self._driver.quit()
