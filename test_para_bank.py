@@ -109,7 +109,6 @@ class TestParaBank(unittest.TestCase):
 
     def test_get_transactions_for_date_range(self):
         self.open_new_account()
-        print(ParaBankTestData.from_date, ParaBankTestData.to_date)
         self.para_bank.find_transactions_page.visit()
         self.para_bank.find_transactions_page.find_by_date_range(
             ParaBankTestData.from_date, ParaBankTestData.to_date
