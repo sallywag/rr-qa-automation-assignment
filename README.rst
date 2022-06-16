@@ -31,6 +31,10 @@ To run the tests with console output, use the unittest runner:
 
 ``python -m unittest -v test_para_bank.py``
 
+To run a specific test case (TestParaBank.test_method_name):
+
+``python test_para_bank.py TestParaBank.test_registration``
+
 Technologies Used
 -----------------
 
