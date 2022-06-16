@@ -1,4 +1,6 @@
-from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 from element_handler import ElementHandler
 from pages import (
@@ -13,9 +15,11 @@ from pages import (
 
 
 class ParaBank:
-    def __init__(self, driver: WebDriver, element_handler: ElementHandler):
-        self._driver = driver
-        self._element_handler = element_handler
+    def __init__(self):
+        self._driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install())
+        )
+        self._element_handler = ElementHandler(self._driver)
         self.index_page = IndexPage(self._driver, self._element_handler)
         self.admin_page = AdminPage(self._driver, self._element_handler)
         self.register_page = RegisterPage(self._driver, self._element_handler)
