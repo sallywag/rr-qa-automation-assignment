@@ -1,7 +1,5 @@
 import unittest
 
-from selenium import webdriver
-from element_handler import ElementHandler
 import requests
 import xmltodict
 from HTMLTestRunner import HTMLTestRunner
@@ -13,9 +11,7 @@ from test_data import ParaBankTestData
 class TestParaBank(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome("chromedriver.exe")
-        cls.element_handler = ElementHandler(cls.driver)
-        cls.para_bank = ParaBank(cls.driver, cls.element_handler)
+        cls.para_bank = ParaBank()
         cls.para_bank.admin_page.visit()
         cls.para_bank.admin_page.initialize_database(
             ParaBankTestData.initial_amount, ParaBankTestData.minimum_amount
@@ -23,7 +19,7 @@ class TestParaBank(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        cls.driver.quit()
+        cls.para_bank.quit()
 
     def setUp(self):
         self.clean_database()
@@ -113,6 +109,7 @@ class TestParaBank(unittest.TestCase):
 
     def test_get_transactions_for_date_range(self):
         self.open_new_account()
+        print(ParaBankTestData.from_date, ParaBankTestData.to_date)
         self.para_bank.find_transactions_page.visit()
         self.para_bank.find_transactions_page.find_by_date_range(
             ParaBankTestData.from_date, ParaBankTestData.to_date
